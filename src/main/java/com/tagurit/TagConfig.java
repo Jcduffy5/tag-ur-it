@@ -4,16 +4,25 @@ import net.runelite.client.config.Config;
 import net.runelite.client.config.ConfigGroup;
 import net.runelite.client.config.ConfigItem;
 
-@ConfigGroup("example")
+@ConfigGroup("tagurit")
 public interface TagConfig extends Config
 {
 	@ConfigItem(
-		keyName = "greeting",
-		name = "Welcome Greeting",
-		description = "The message to show to the user when they login"
+		keyName = "players",
+		name = "Who's playing?",
+		description = "Enter comma-separated list of participants rsn's."
 	)
-	default String greeting()
+	default String getPlayers()
 	{
-		return "Hello";
+		return "";
 	}
+
+	@ConfigItem(
+			keyName = "players",
+			name = "",
+			description = ""
+	)
+	void setPlayers(String key);
+
+
 }
