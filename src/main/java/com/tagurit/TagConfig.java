@@ -8,21 +8,21 @@ import net.runelite.client.config.ConfigItem;
 public interface TagConfig extends Config
 {
 	@ConfigItem(
-		keyName = "players",
-		name = "Who's playing?",
-		description = "Enter comma-separated list of participants rsn's."
+		keyName = "whosit",
+		name = "tag event information",
+		description = "information about most recent tag event."
 	)
-	default String getPlayers()
+	default String getWhosIt()
 	{
 		return "";
 	}
 
 	@ConfigItem(
-			keyName = "players",
+			keyName = "whosit",
 			name = "",
 			description = ""
 	)
-	void setPlayers(String key);
+	void setWhosIt(String key);
 
 
 }
